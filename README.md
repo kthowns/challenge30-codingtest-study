@@ -51,7 +51,7 @@
     - 또 다른 풀이 방식 제시
 - 코드의 일부분에다 코드리뷰를 해도 되고 전체 코드 밑 or PR 하나 밑에다 코멘트 작성으로 리뷰를 해도 됩니다.
 
-# 참고 저장소
+# ✅ 참고 저장소
 
 - https://waytocse.tistory.com/59
 - https://github.com/ellynhan/challenge100-codingtest-study/tree/jaewon#readme
