@@ -16,7 +16,6 @@ public class CallBy {
     private static int[] computeTwoInt(int a, int b) {
         int[] temp = new int[2];
         if (a > b) {
-            temp[0] = a * 2;
             temp[1] = b + 10;
         } else {
             temp[0] = a + 10;
