@@ -13,6 +13,7 @@ public class rangesum {
         int[] A = new int[n+1]; 
         //수열 A안에 값 입력
         //미해결
+        //다소 공부가 필요
         for(int i=1;i<n+1;i++){
             A[i] = sc.nextInt();
             for(int j=1;j<m+1;j++){
