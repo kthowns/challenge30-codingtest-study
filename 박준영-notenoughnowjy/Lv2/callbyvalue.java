@@ -17,7 +17,7 @@ public class callbyvalue{
                 b = b*2;
                 System.out.print(a + " " + b);
             }
-            else{ //다른 경우(a가 b보다 크거나 같으면) -> 같으면을 고칠 필요가 있음
+            else{ //다른 경우(a가 b보다 크거나 같으면) -> 같은 경우 고칠 필요가 있음 
                 b = b+10;
                 a = a*2;
                 System.out.print(b + " " + a);
