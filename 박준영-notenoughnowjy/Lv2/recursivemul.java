@@ -9,7 +9,8 @@ public class recursivemul {
 
         //재귀함수를 이용한 최소공배수
         //미해결
-        
+        //다소 공부가 필요
+
         if(n>=1 && n<=10){
             for(int i=0;i<n;i++){
                 array[i] = sc.nextInt();
