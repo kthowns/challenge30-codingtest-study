@@ -7,6 +7,9 @@ public class recursivemul {
         int n = sc.nextInt();
         int[] array = new int[n+1];
 
+        //재귀함수를 이용한 최소공배수
+        //미해결
+        
         if(n>=1 && n<=10){
             for(int i=0;i<n;i++){
                 array[i] = sc.nextInt();

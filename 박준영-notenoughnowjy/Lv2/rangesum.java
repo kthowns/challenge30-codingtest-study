@@ -12,6 +12,7 @@ public class rangesum {
         //A라는 수열 전역으로 선언
         int[] A = new int[n+1]; 
         //수열 A안에 값 입력
+        //미해결
         for(int i=1;i<n+1;i++){
             A[i] = sc.nextInt();
             for(int j=1;j<m+1;j++){
@@ -24,7 +25,7 @@ public class rangesum {
 
 
 
-        
+
         
         // for(int i=0;i<n;i++){
         //     System.out.println(array[i]);
