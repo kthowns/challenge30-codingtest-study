@@ -1,5 +1,4 @@
 package Lv2;
-
 import java.util.Scanner;
 
 public class recursivemul {
