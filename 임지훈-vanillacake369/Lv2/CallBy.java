@@ -7,11 +7,13 @@ public class CallBy {
         String[] inputStr = scanner.nextLine().split(" ");
         int a = Integer.parseInt(inputStr[0]);
         int b = Integer.parseInt(inputStr[1]);
+
         /* calc */
         int[] result = computeTwoInt(a, b);
+
         /* result */
         System.out.println((result[0]) + " " + (result[1]));
-    } 
+    }
 
     /**
      * 의사코드
@@ -23,6 +25,7 @@ public class CallBy {
      */
     private static int[] computeTwoInt(int a, int b) {
         int[] temp = new int[2];
+
         if (a > b) {
             temp[0] = a * 2;
             temp[1] = b + 10;
@@ -30,6 +33,7 @@ public class CallBy {
             temp[0] = a + 10;
             temp[1] = b * 2;
         }
+
         return temp;
     }
 }
