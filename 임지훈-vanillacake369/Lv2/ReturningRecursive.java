@@ -9,8 +9,10 @@ public class ReturningRecursive {
         for (int i = 0; i < inputNumArr.length; i++) {
             inputNumArr[i] = scanner.nextInt();
         }
+
         /* 연산 */
         int lastCommonMult = getLastCommonMult(inputNumArr);
+
         /* 출력 */
         System.out.println(lastCommonMult);
     }

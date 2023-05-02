@@ -7,21 +7,6 @@ public class NoneReturningRecursive {
         printStar(n);
     }
 
-    /*
-     * printStar(5)
-     * printStar(4)
-     * printStar(3)
-     * printStar(2)
-     * printStar(1)
-     * printStar(2)
-     * printStar(3)
-     * printStar(4)
-     * printStar(5)
-     * */
-    /*
-     * for : i = 5(input); i >= 1; i--
-     *   printStar(input-1);
-     * */
     private static void printStar(int n) {
         // 1. n만큼 star 출력
         for (int i = 0; i < n; i++) {

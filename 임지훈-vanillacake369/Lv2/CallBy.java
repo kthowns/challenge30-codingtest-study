@@ -11,7 +11,7 @@ public class CallBy {
         int[] result = computeTwoInt(a, b);
         /* result */
         System.out.println((result[0]) + " " + (result[1]));
-    }
+    } 
 
     /**
      * 의사코드
