@@ -15,6 +15,8 @@ public class ReturningRecursive {
 
         /* 출력 */
         System.out.println(lastCommonMult);
+
+        scanner.close();
     }
 
     /**

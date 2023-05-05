@@ -14,10 +14,6 @@ public class OutputOf52 {
     public static int f(int x, int y) {
         if (x == 0)
             return 0;
-        System.out.print("x / 3 : " + x / 3);
-        System.out.print(" , y * 3 : " + y * 3);
-        System.out.println(" , x % 3 * y : " + x % 3 * y);
-
         return f(x / 3, y * 3) + x % 3 * y;
     }
 
