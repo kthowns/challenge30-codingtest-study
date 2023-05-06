@@ -13,6 +13,8 @@ public class CallBy {
 
         /* result */
         System.out.println((result[0]) + " " + (result[1]));
+
+        scanner.close();
     }
 
     /**
