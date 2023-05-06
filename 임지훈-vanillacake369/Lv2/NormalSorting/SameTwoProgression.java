@@ -9,9 +9,9 @@ public class SameTwoProgression {
     /**
      * 의사 코드
      * 1. 수열의 크기를 입력으로 받는다.
-     * 1. 두번째 줄의 모든 값을 - 첫 번째 수열을 - 해쉬테이블에 저장한다. <값 : 등장수 >
+     * 1. 두번째 줄의 모든 값을 - 첫 번째 수열을 - 해쉬테이블에 저장한다. <값 : 등장수>
      * 2. 세번째 줄의 모든 값을 - 두 번째 수열을 - 비교한다.
-     * 2-1. 모든 값이 키 값으로 등록되어있다면 Yes
+     * 2-1. 두 번째 수열의 모든 값이 키 값으로 등록되어있다면 첫 번째 수열 원소들을 모두 가지고 있으므로 Yes
      * 2-2. 이외의 경우 No 반환
      */
 
@@ -34,9 +34,13 @@ public class SameTwoProgression {
     public static void main(String[] args) {
         /* 입력 */
         Scanner scanner = new Scanner(System.in);
+
         /* 연산 */
-        scanner.nextLine(); // 해당 로직 프로세스 상 수열의 크기 입력은 의미가 없으므로 그냥 받기만 하고 저장하지 않음
-        String resultOfComparison = compareTwoProgression(scanner); // 두 수열이 같다면 Yes,아니라면 No 반환 함수 호출
+        // 해당 로직 프로세스 상 수열의 크기 입력은 의미가 없으므로 그냥 받기만 하고 저장하지 않음
+        scanner.nextLine();
+        // 두 수열이 같다면 Yes,아니라면 No 반환 함수 호출
+        String resultOfComparison = compareTwoProgression(scanner);
+
         /* 출력 */
         System.out.println(resultOfComparison);
     }
@@ -52,13 +56,16 @@ public class SameTwoProgression {
     private static String compareTwoProgression(Scanner scanner) {
         // 첫 수열 :: 각 숫자를 " " 구분자를 통해 정수형 배열로서 입력받기
         int[] firstProgression = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+
         // 첫 수열을 해쉬테이블에 저장 :: <값 : 등장수>
         for (int element : firstProgression) {
             // 기존값이 있다면 +1
             hashtable.put(element, 1);
         }
+
         // 두 번째 수열 :: 각 숫자를 " " 구분자를 통해 정수형 배열로서 입력받기
         int[] secondProgression = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+
         // 두 수열을 비교 :: 두 수열이 같다면 true, 아니라면 false
         if (hasHashTableKey(secondProgression)) {
             return "Yes";
