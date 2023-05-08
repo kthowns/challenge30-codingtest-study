@@ -17,6 +17,8 @@ public class NoneReturningRecursive {
 
         /* 연산 및 출력 */
         printStar(n);
+
+        scanner.close();
     }
 
     private static void printStar(int n) {

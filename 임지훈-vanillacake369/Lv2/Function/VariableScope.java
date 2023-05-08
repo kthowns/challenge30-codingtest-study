@@ -21,7 +21,7 @@ public class VariableScope {
         Scanner scanner = new Scanner(System.in);
         // 첫 줄 : n,m
         String[] inputStrArr = scanner.nextLine().split(" ");
-        int n = Integer.parseInt(inputStrArr[0]);
+        // int n = Integer.parseInt(inputStrArr[0]);
         int m = Integer.parseInt(inputStrArr[1]);
         // 2번째 줄 : A의 원소 배열 생성
         arrA = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
@@ -37,6 +37,8 @@ public class VariableScope {
         for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
         }
+
+        scanner.close();
     }
 
     private static ArrayList<Integer> getSumOfA(ArrayList<Integer> a1a2MemArr) {
