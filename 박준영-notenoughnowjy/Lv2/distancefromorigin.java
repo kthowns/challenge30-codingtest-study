@@ -1,3 +1,29 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Point implements Comparable<Point> {
+  int distance;
+  int number;
+
+  public Point(int distance, int number){
+    this.distance = distance;
+    this.number = number;
+
+  }
+  // public int compareTO(Point point){
+  //   if(Math.abs(x)+Math.abs(y) != Math.abs(point.x)+Math.abs(point.y)){
+  //     return Math.abs(x)+Math.abs(y) - Math.abs(point.x)+Math.abs(point.y);
+  //   }
+  //   return number - point.number;
+  // }
+
+  public int compareTo(Point point){
+    if(distance != point.distance){
+      return distance - point.distance;
+    }
+    return number - point.number;
+  }
+}
 public class distancefromorigin{
 
   /* 원점으로부터의 거리
@@ -34,7 +60,28 @@ public class distancefromorigin{
    * 3
    * 
    */
+  // public static int distfromorigin(int x, int y){
+  //   return Math.abs(x) + Math.abs(y);
+  // }
+
   public static void main(String[] args){
 
+    Point[] point = new Point[200];
+
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+
+    int x,y;
+    for(int i=0;i<n;i++){
+      x = sc.nextInt();y = sc.nextInt();
+      int distance = Math.abs(x)+Math.abs(y);
+      point[i] = new Point(distance, i+1);
+    }
+
+    Arrays.sort(point, 0, n);
+
+    for(int i=0;i<n;i++){
+      System.out.println(point[i].number);
+    }
   }
 }
