@@ -35,7 +35,7 @@ public class TwoLines {
         else if(x[0] >= x[2] && x[0] <= x[3]){
             output = "intersecting";
         }
-        else if(x[1] >= x[2] && x[1] <= x[4]){
+        else if(x[1] >= x[2] && x[1] <= x[3]){
             output = "intersecting";
         }
     }
