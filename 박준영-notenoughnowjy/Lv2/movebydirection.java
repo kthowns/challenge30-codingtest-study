@@ -38,7 +38,6 @@ public class movebydirection{
         int[] dy = new int[]{0, 1, 0, -1}; //동 북 서 남
 
 
-        System.out.print("얼마만큼의 dirNum을 입력? : ");
         int n = sc.nextInt();
         for(int i=0;i<n;i++){
 
