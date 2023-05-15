@@ -19,6 +19,15 @@
  * 12
 
  */
+
+ /*
+  * 의사 코드
+  1. N과 M을 입력받는다.
+  2. 각각의 반복문을 통해 값을 입력받는다.
+  3. R은 +, L은 -로 한다.
+  4. 각 시간마다 A의 위치와 B의 위치를 기록한다.
+  5. A의 위치와 B의 위치가 저장된 배열을 비교해서 같은 인덱스에 같은 값이 있다면 그 시간대의 인덱스를 출력한다.
+  */
 import java.util.Scanner;
 public class whentheymeet{
   public static void main(String[] args){
