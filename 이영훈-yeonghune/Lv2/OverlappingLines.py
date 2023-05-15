@@ -27,5 +27,5 @@ lst = []
 for i in range(n):
     x1, x2 = map(int,input().split())
     lst.append([x1, x2])
-
+ 
 operating(lst)

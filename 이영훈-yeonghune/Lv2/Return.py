@@ -62,3 +62,4 @@ for i in range(n):
     lst.append([Direction, Distance])
 
 Calc(lst)
+ 

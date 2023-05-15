@@ -33,6 +33,4 @@ def Operating(x1, x2, x3, x4):
     
 
 x1, x2, x3, x4 =map(int, input().split())
-Operating(x1, x2, x3, x4)
-
-
+Operating(x1, x2, x3, x4) 

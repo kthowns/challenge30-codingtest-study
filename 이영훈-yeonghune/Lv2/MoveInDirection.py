@@ -32,3 +32,4 @@ for i in range(n):
 
 Calc(lst)
 
+ 
