@@ -1,5 +1,3 @@
-package Lv2;
-
 import java.util.Scanner;
 
 // 특정 구간의 합
