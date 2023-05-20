@@ -29,7 +29,7 @@
   */
   import java.util.Scanner;
 
-  public class sectioning {
+  public class sectioningmaxsum {
   
     public static int Max_N = 1000;
     public static void main(String[] args){
