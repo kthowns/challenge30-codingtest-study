@@ -18,16 +18,27 @@
  * 5. Math.abs(sum1 - sum2)의 최솟값을 구한다.
  * 6. result 값을 출력한다.
  */
+
+import java.util.Scanner;
+
 public class developersability {
-  public static int[] arr = new int[]{1, 2, 3, 4, 5, 6}; // 배열
+  public static int Max_N = 6;
+  
+  public static int n = Max_N;
+  public static int[] arr = new int[Max_N]; // 배열
     public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
       int result = Integer.MAX_VALUE; // 최솟값을 최대로 설정해준다.
 
-      for(int i=0; i<6; i++){ // i값 받기
+      for(int i=0; i<n; i++){ // 배열 값 받기
+        arr[i] = sc.nextInt();
+      }
 
-        for(int j=i+1; j<6; j++){ // j값 받기
+      for(int i=0; i<n; i++){ // i값 받기
 
-          for(int k=j+1; k<6; k++){ // k값 받기
+        for(int j=i+1; j<n; j++){ // j값 받기
+
+          for(int k=j+1; k<n; k++){ // k값 받기
             result = Math.min(result, getDiff(i, j, k)); // getDiff함수로 값 받은 후 result에 넣기
           }
         }
@@ -36,13 +47,13 @@ public class developersability {
       System.out.print(result); // 결과 값 출력
   }
     private static int getDiff(int i, int j, int k) { // getDiff 함수
-      int sum1 = arr[i]+arr[j]+arr[k]; // sum1 값 구하기
-      int sum2 = 0; // sum2 값 설정해주기
-
+      int totalsum = 0;
       for(int t=0;t<6;t++){ // sum2에 배열의 모든 값을 더해주기
-        sum2 += arr[t];
+        totalsum += arr[t]; // 종합적인 값 구하기
       }
-      sum2 = sum2 - sum1; // 배열의 모든 값을 더해놓은 sum2 값에 sum1값을 빼기
+
+      int sum1 = arr[i] + arr[j] + arr[k]; // sum1 값 구하기
+      int sum2 = totalsum - sum1; // sum2 값 구하기
       return Math.abs(sum2 - sum1); // sum2 - sum1 해주기 -> 순서는 상관없음 -> 어차피 절댓값
     }
 }
