@@ -25,7 +25,6 @@ public class DeveloperSkills {
 
         System.out.println(minValue);
     }
-
     /**
      * 그룹간 차이가 최소인지 확인하는 함수
      */
@@ -38,7 +37,6 @@ public class DeveloperSkills {
             }
         }
     }
-
     /**
      * 그룹간 능력 총합의 차이를 구하는 함수
      * @param developer1 첫 번째 개발자의 능력
