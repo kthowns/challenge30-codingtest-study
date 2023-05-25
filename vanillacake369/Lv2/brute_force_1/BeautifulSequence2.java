@@ -1,4 +1,4 @@
-package vanillacake369.Lv2.brute_force;
+package vanillacake369.Lv2.brute_force_1;
 
 import java.util.*;
 
