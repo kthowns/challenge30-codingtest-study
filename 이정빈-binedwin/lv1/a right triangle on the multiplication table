@@ -1,5 +1,5 @@
 /*
-12번째 줄에 (n-j) 이 부분을 1,2,3,4,~.n 의 값으로 출력하고 싶은데 방법이 없을까요
+
 */
 import java.util.Scanner;
 public class Main {
