@@ -15,8 +15,6 @@ int main() {
     }
     
     for(int i=0; i<q; i++){
-        a = 0;
-        b = 0;
         std::cin >> qType;
         if(qType == 1){
             std::cin >> a;
