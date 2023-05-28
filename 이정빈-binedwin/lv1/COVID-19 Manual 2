@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] countArr = new int[5];
+        int t = 0; 
+        
+        for(int i = 0; i < 3; i++) {
+           char s = sc.next().charAt(0);
+            int a = sc.nextInt();
+
+            if(a >= 37 && s == 'Y')
+                t= 1;
+            else if(a >= 37)
+                t = 2;
+            else if(s == 'Y')
+                t = 3;
+            else
+                t = 4;
+            countArr[t]++;
+        }
+
+         for(int i = 1; i <= 4; i++) {
+            System.out.print(countArr[i] + " ");
+        }
+        
+        if(countArr[1] >= 2)
+            System.out.print("E");
+    }
+}
