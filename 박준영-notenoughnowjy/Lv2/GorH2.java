@@ -43,40 +43,40 @@
 import java.util.Scanner;
 
 public class GorH2{
-  public static int Max_N = 101;
+  public static int Max_N = 101; // 최대값 설정 -> for문에서 "<=" 기호를 쓰기 싫어서 101로 설정
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
 
     int n = sc.nextInt();
     char[] arr = new char[Max_N];
 
-    for(int i=0; i<n;i++){
+    for(int i=0; i<n;i++){ // 입력값
       int x = sc.nextInt();
       char c = sc.next().charAt(0);
 
-      arr[x] = c;
+      arr[x] = c; // 각각의 배열에 문자를 넣어준다.
     }
 
     int maxLen = 0;
     for(int i=0; i<Max_N; i++){
       for(int j=i+1; j<Max_N; j++){
-        if(arr[i] == 0 || arr[j] == 0){
+        if(arr[i] == 0 || arr[j] == 0){ // 문자가 없으면 다음 반복문으로 넘긴다.
           continue;
         }
-        int Gcnt = 0;
-        int Hcnt = 0;
+        int Gcnt = 0; // 초기화
+        int Hcnt = 0; // 초기화
 
         for(int k=i;k<=j;k++){
-          if(arr[k] == 'H'){
+          if(arr[k] == 'H'){ // H면 Hcnt++
             Hcnt++;
           }
-          if(arr[k] == 'G'){
+          if(arr[k] == 'G'){ // G면 Gcnt++
             Gcnt++;
           }
         }
 
-        if(Hcnt == 0 || Gcnt == 0 || Hcnt == Gcnt){
-          int len = j - i;
+        if(Hcnt == 0 || Gcnt == 0 || Hcnt == Gcnt){ // H와 G의 개수가 같거나, H만 있거나, G만 있을 때의 조건문
+          int len = j - i; 
           maxLen = Math.max(maxLen, len);
         }
       }
