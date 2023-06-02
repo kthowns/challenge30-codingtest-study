@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class Main {
+    public static int countA(int a, int b) {
+        int[] t = new int[b];
+        Arrays.fill(t, 0);
+
+        while (a > 1) {
+            int k = a / b;
+            int remainder = a % b;
+            t[remainder]++;
+            a = k;
+        }
+
+        int sum = 0;
+        for (int count : t) {
+            sum += Math.pow(count, 2);
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int a = 1000;
+        int b = 4;
+        int result = countA(a, b);
+        System.out.println(result);
+    }
+}
