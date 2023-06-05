@@ -1,0 +1,32 @@
+/*
+의사코드
+* contains 함수를 통해 정수를 파악
+* 일의 자리수를 확인하여 3,6,9 숫자를 파악
+* 변수를 선언받고 계수(cnt) 출력.
+*/
+
+import java.util.Scanner;
+public class Main {
+    public static boolean contains369(int n) { //contains 함수를 통해 3,6,9 숫자가 포함되어 있는지 확인 
+        while(n > 0) {
+            if(n % 10 == 3 || n % 10 == 6 || n % 10 == 9) // 일의 자리수를 확인
+                return true;
+            n /= 10;
+        }
+        return false;
+    }
+    public static boolean is369Number(int n) { //isNumber 함수와 contains 함수를 통해 3,6,9가 있는지 확인
+        return contains369(n) || (n % 3 == 0); // 또는 3의 배수인지 확인
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();       // 변수 선언
+        int b = sc.nextInt();       // 변수 선언
+        int cnt = 0;
+        for(int i = a; i <= b; i++)
+            if(is369Number(i))
+                cnt++;              // 3의 배수이거나 3,6,9가 포함되어 있는 정수의 계수를 파악하고 출력
+        System.out.println(cnt);
+    }
+}
+
