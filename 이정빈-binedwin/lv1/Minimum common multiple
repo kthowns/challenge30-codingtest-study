@@ -1,0 +1,22 @@
+/*
+의사코드
+* 두 수를 입력
+* 입력받은 두 수의 최소공배수에 대한 최대값를 설정
+* 최소 공배수 출력
+*/
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int n =sc.nextInt();
+        int m =sc.nextInt();
+        
+        for(int i=1; i<=n*m; i++){       // 주어진 두 수의 최대 수를 설정 
+            if((i%n==0) && (i%m==0)){    // 주어진 두 수에 대해 제일 처음 나오는 공배수
+              System.out.println(i);     // 최소 공배수 출력
+              break;               
+            }
+        }
+    }
+}
