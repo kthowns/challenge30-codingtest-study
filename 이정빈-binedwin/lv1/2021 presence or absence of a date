@@ -1,0 +1,66 @@
+/*
+의사코드
+* 월 M 과 일 D 를 입력 받습니다.
+* 8월 기준으로 일 수가 바뀌기 때문에 7월 이하 경우의 일수를 먼저 판단합니다.
+* 2월일때, 홀수의 월 일때, 짝수의 월 일때를 나눠서 판단합니다.
+* 다음으로 8월부터 12월 부터의 일수를 계산합니다.
+* 이때는 홀수의 월 일때, 짝수의 월 일때를 나눠서 판단합니다.
+*/
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int M=sc.nextInt();
+        int D=sc.nextInt();
+        
+        if(M<=7){       // 7월 이하의 경우를 판단합니다.
+            if(M==2){    // 2월 일때의 경우를 판단합니다.
+                if(D<=28){   // 2월은 28일까지 있으므로 일 수를 판단합니다.
+                    System.out.print("Yes");
+                }
+                else{   
+                    System.out.print("No");
+                }
+            }
+            else if(M%2==1){       // 홀 수의 달의 경우를 판단합니다.
+                if(D<=31){         // 홀 수의 경우 31일까지 있으므로 일 수를 판단합니다.
+                    System.out.print("Yes");
+                }
+                else{
+                    System.out.print("No");
+                }
+            }
+            else if(M%2==0){       // 짝 수의 달의 경우를 판단합니다.
+                if(D<=30){         // 짝 수의 경우 30일까지 있으므로 일 수를 판단합니다.
+                    System.out.print("Yes");
+                }
+                else{
+                    System.out.print("No");
+                }
+            }
+        }
+
+        else if(M<=12){     //8월부터 12월까지의 경우를 판단합니다.
+            if(M%2==0){   
+                if(D<=31){
+                    System.out.print("Yes");
+                }
+                else{
+                    System.out.print("No");
+                }
+            }
+            else if(M%2==1){
+                if(D<=30){
+                    System.out.print("Yes");
+                }
+                else{
+                    System.out.print("No");
+                }
+            }
+        }
+        else{       // M이 13이 넘어갈 경우
+            System.out.print("No");
+        }
+    }
+}
