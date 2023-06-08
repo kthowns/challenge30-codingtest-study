@@ -10,7 +10,7 @@ dateInspect(m, d){
     return result
 }
 */
-
+ 
 #include <iostream>
 
 int dateInspect(int m, int d){
