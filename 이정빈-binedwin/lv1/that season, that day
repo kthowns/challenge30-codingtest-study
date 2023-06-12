@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+    public static String getSeason(int year, int month, int day) {
+        if (month < 1 || month > 12 || day < 1 || day > 31) {
+            return "-1"; // 잘못된 월이나 일 입력 시 -1 반환
+        }
+        
+        if (month >= 3 && month <= 5) {
+            return "Spring";
+        } else if (month >= 6 && month <= 8) {
+            return "Summer";
+        } else if (month >= 9 && month <= 11) {
+            return "Fall";
+        } else {            // month가 12, 1, 2인 경우
+            return "Winter";
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int year =sc.nextInt();
+        int month =sc.nextInt();
+        int day = sc.nextInt();
+        
+        String season = getSeason(year, month, day);
+        
+        if (season.equals("-1")) {
+            System.out.println("-1");
+        } else {
+            System.out.println(season);
+        }
+    }
+}
